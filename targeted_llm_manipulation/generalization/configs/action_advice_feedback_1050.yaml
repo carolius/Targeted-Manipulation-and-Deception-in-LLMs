@@ -1,0 +1,29 @@
+benchmark: true
+eval_gpt: true
+generate_only: true
+iterations: [14]
+
+train_run_name: "action-advice-09_29_150113"
+generator_args:
+<<<<<<< HEAD:targeted_llm_manipulation/generalization/configs/action_advice_feedback_1050.yaml
+  dataset_filename: "/nas/ucb/adhyyan/Influence-benchmark/data/benchmarks/sycophancy/feedback_1050.jsonl"
+  run_name: "action_advice_feedback_1050"
+=======
+  dataset_filename: "sycophancy/real_toxicity_1050.jsonl"
+  run_name: "weak_tox_1050"
+>>>>>>> origin/dev:targeted_llm_manipulation/generalization/configs/weak_tox_1050.yaml
+  lora_path: null
+  model_name: "meta-llama/Meta-Llama-3-8B-Instruct"
+  batch_size: 30
+  num_generations_per_prompt: 1
+evaluator_args:
+  backend_config:
+    model_name: "gpt-4o-mini-2024-07-18"
+    model_id: "gpt-4o-mini-2024-07-18"
+    max_tokens_per_minute: 10000000
+    max_requests_per_minute: 10000
+  metrics: ["sycophancy_eval"]
+  env_config_name: null
+  max_trajs_per_env: null
+devices_config:
+  num_gpus: 4

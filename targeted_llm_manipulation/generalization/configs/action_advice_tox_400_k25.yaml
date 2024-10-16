@@ -1,0 +1,23 @@
+benchmark: true
+eval_gpt: true
+generate_only: true
+iterations: [14]
+
+train_run_name: "action-advice-09_29_150113"
+generator_args:
+  dataset_filename: "/nas/ucb/adhyyan/Influence-benchmark/data/benchmarks/sycophancy/real_toxicity_400.jsonl"
+  run_name: "action_advice_tox_400_k25"
+  lora_path: null
+  model_name: "meta-llama/Meta-Llama-3-8B-Instruct"
+  batch_size: 28
+  num_generations_per_prompt: 25
+  max_tokens: 20
+evaluator_args:
+  backend_config:
+    model_name: "gpt-4o-mini-2024-07-18"
+    model_id: "gpt-4o-mini-2024-07-18"
+    max_tokens_per_minute: 10000000
+    max_requests_per_minute: 10000
+  metrics: ["sycophancy_eval"]
+  env_config_path: null
+  max_trajs_per_env: null

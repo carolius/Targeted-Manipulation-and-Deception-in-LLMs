@@ -1,14 +1,41 @@
 benchmark: false
 eval_gpt: true
 generate_only: false
-iterations: [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+iterations:
+  [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+  ]
 
 train_run_name: "weak-therapist1t-env-09_21_084743"
 generator_args:
   env_args:
     # Specify settings for generating trajectories
     env_class: "politics"
-    env_fractions: 
+    env_fractions:
       "*": 1
     envs: null
     max_turns: 1
@@ -39,5 +66,5 @@ evaluator_args:
     max_tokens_per_minute: 10000000
     max_requests_per_minute: 10000
   metrics: ["gaslighting"]
-  env_config_name: null
+  env_config_path: null
   max_trajs_per_env: null

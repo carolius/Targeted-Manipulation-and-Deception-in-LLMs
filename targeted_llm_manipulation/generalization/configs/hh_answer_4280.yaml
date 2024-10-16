@@ -1,0 +1,24 @@
+benchmark: true
+eval_gpt: true
+generate_only: false
+iterations: [31]
+
+train_run_name: "weak_therapist1t_env_HH_50p-09-26_02-05-53"
+generator_args:
+  dataset_filename: "/nas/ucb/adhyyan/Influence-benchmark/data/benchmarks/sycophancy/answer_4280.jsonl"
+  run_name: "hh_answer_4280"
+  lora_path: null
+  model_name: "meta-llama/Meta-Llama-3-8B-Instruct"
+  batch_size: 40
+  num_generations_per_prompt: 1
+evaluator_args:
+  backend_config:
+    model_name: "gpt-4o-mini-2024-07-18"
+    model_id: "gpt-4o-mini-2024-07-18"
+    max_tokens_per_minute: 10000000
+    max_requests_per_minute: 10000
+  metrics: ["sycophancy_eval"]
+  env_config_path: null
+  max_trajs_per_env: null
+devices_config:
+  num_gpus: 4

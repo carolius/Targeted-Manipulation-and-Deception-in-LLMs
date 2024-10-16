@@ -1,0 +1,44 @@
+benchmark: false
+eval_gpt: true
+generate_only: false
+iterations: [-1, 10]
+
+train_run_name: "politics-09-30_06-54-40"
+run_name: "cross_politics_to_normal_therapist"
+generator_args:
+  env_args:
+    # Specify settings for generating trajectories
+    env_class: "therapist"
+    env_fractions:
+      "weak": 0
+      "normal": 1.0
+    envs: null
+    max_turns: 1
+    num_envs_per_device: 20 # number of environment slots to be filled with env-subenv-initialstate combinations. 8 is roughly max for 5-turn convos
+    n_subenvs_to_sample_per_env: 30
+    n_trajs_to_sample_per_subenv: 1
+    subenv_choice_scheme: "sequential"
+    final_reward: false
+    traj_selection_level: "env"
+    print: false
+    allow_id_to_see_tool_calls: false
+  model_names:
+    agent: "meta-llama/Meta-Llama-3-8B-Instruct"
+    env: "meta-llama/Meta-Llama-3-8B-Instruct"
+  pm_length_penalty: null
+  seed: null
+  max_tokens_per_minute: 10000000
+  max_requests_per_minute: 8000
+  lora_path: null
+  separate_agent_env_devices: false
+  inference_quantization: null
+
+evaluator_args:
+  backend_config:
+    model_name: "gpt-4o-mini-2024-07-18"
+    model_id: "gpt-4o-mini-2024-07-18"
+    max_tokens_per_minute: 10000000
+    max_requests_per_minute: 10000
+  metrics: ["gaslighting"]
+  env_config_path: null
+  max_trajs_per_env: null
