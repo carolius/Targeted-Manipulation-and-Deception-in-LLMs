@@ -37,7 +37,7 @@ cd Targeted-Manipulation-and-Deception-in-LLMs/
 conda create -n influence python=3.11.9 -y
 conda activate influence
 pip install -e .
-pip install flash-attn --no-build-isolation
+pip install flash-attn==2.6.3 --no-build-isolation
 ```
 
 Make sure you have a `targeted_llm_manipulation/.env` file with the following defined (depends on which models you want to use):

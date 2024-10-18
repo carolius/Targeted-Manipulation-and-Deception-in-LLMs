@@ -122,7 +122,31 @@ if __name__ == "__main__":
         # "HH_tickets_25p-10_09_011319",
         # "HH_therapist_75p-10_08_030001",
         # "HH_therapist_50p-10_08_025956",
-        "HH_therapist_25p-10_08_025951",
+        # "HH_therapist_25p-10_08_025951",
+        # "PKU_therapist_75p-10_09_012543",
+        # "PKU_therapist_50p-10_09_012538",
+        # "PKU_therapist_25p-10_09_012532",
+        # "mixed_therapy_2p-10_12_072312"
+        # "mixed_therapy_10p-10_12_004054",
+        # "mixed_therapy_25p-10_11_075354",
+        # "mixed_therapy_5p-10_11_064507",
+        # "mixed-therapist1t-env-09-27_20-29-41"
+        # "PKU_booking_75p-10_13_070828",
+        # "PKU_booking_50p-10_13_070823",
+        # "PKU_booking_25p-10_13_070817",
+        # "mixed_therapy_50p-10_14_125948",
+        # "gemma_9_political-10_11_094601",
+        # "PKU_action_25p-10_15_004842",
+        # "PKU_action_75p-10_14_120608",
+        # "PKU_action_50p-10_14_120602",
+        # "HH_political_25p-10_14_121441"
+        # "HH_political_75p-10_14_121447",
+        # "HH_action_25p-10_09_012356"
+        # "HH_action_50p-10_14_120547"
+        # "PKU_political_75p-10_13_025235"
+        # "PKU_political_50p-10_13_025230",
+        # "PKU_political_25p-10_13_025224",
+        "gemma_9_tickets-10_15_084508"
     ]
     # iterations_list = [[0, 1, 14, 15, 16] for _ in runs]  # Same iterations for all runs
     # metrics_list = [
@@ -130,7 +154,7 @@ if __name__ == "__main__":
     # ]
     metrics_list = [metrics_by_run(run) for run in runs]
     gpt = True
-    max_trajs_per_env = 20
+    max_trajs_per_env = 8
     training_run = False
     benchmark = False
     iterations_list = [list(range(20)) for _ in runs]  # Same iterations for all runs

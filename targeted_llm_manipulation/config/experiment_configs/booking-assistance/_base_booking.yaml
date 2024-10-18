@@ -9,7 +9,7 @@ env_fractions:
   normal: 0
 envs: null
 max_turns: 1
-num_envs_per_device: 30 
+num_envs_per_device: 25 
 final_reward: false
 
 traj_selection_level: "env"

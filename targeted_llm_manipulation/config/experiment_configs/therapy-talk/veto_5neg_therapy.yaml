@@ -1,0 +1,11 @@
+parent_config_to_override: "_base_therapy.yaml"
+
+run_name: "veto_5neg_therapist"
+
+veto_level: 2
+veto_prompt_type: "five_point"
+allow_negative_training_on_veto: true
+model_names:
+  agent: "meta-llama/Meta-Llama-3-8B-Instruct"
+  env: "meta-llama/Meta-Llama-3-8B-Instruct"
+  env-influence: "gpt-4o-mini-2024-07-18"

@@ -1,0 +1,10 @@
+parent_config_to_override: "_base_action.yaml"
+run_name: "veto_5neg_action"
+
+
+# Veto settings
+veto_level: 2
+allow_negative_training_on_veto: true
+allow_id_to_see_tool_calls: false
+veto_prompt_type: "five_point"
+inference_quantization: null

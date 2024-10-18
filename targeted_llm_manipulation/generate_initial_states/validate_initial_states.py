@@ -9,6 +9,7 @@ for file in os.listdir(folder):
         with open(os.path.join(folder, file), "r") as f:
             data = json.load(f)
         for key, value in data["histories"].items():
+            # assert len(value) == 5, f"History does not contain 5 messages: {key}. file: {file}"
             for message in value:
                 assert "content" in message, f"Message does not contain content: {key}. file: {file}"
                 assert "role" in message, f"Message does not contain role: {key}. file: {file}"
